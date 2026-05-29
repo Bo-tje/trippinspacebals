@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{e2f14230-10ee-4285-80f0-ebf5aeb786dc}">
+		<property name="assetPath">
+			<value>Zibbs_Background_Music.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>30.474285714285713</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{b60f6a20-4378-4126-a453-2e4686cfc90d}</destination>
+		</relationship>
+	</object>
+</objects>
