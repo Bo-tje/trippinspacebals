@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{0740ec24-3d24-470f-bb18-37aa844eba1f}">
+		<property name="assetPath">
+			<value>Shutter_2.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.9185624999999999</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{5e4d85e3-dc21-4df5-ae74-d681859fe2d4}</destination>
+		</relationship>
+	</object>
+</objects>
