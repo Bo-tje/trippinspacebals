@@ -11,6 +11,55 @@ namespace Player
         public int SlingshotsRemaining => slingshotsRemaining;
 
         private SlingShot _nearbySlingshot;
+        private PlayerController _playerController;
+
+        private void Awake()
+        {
+            _playerController = GetComponent<PlayerController>();
+        }
+
+        private void Update()
+        {
+            // If out of slingshots and player presses R key, return home
+            if (slingshotsRemaining <= 0 && GetReturnHomeKeyPressed())
+            {
+                ReturnHome();
+            }
+        }
+
+        private bool GetReturnHomeKeyPressed()
+        {
+            if (UnityEngine.InputSystem.Keyboard.current != null)
+            {
+                return UnityEngine.InputSystem.Keyboard.current.rKey.wasPressedThisFrame;
+            }
+            return Input.GetKeyDown(KeyCode.R);
+        }
+
+        public void RefillSlingshots(int amount)
+        {
+            slingshotsRemaining = amount;
+            Debug.Log($"Slingshots refilled to: {slingshotsRemaining}");
+        }
+
+        private void ReturnHome()
+        {
+            HomePlanet home = FindFirstObjectByType<HomePlanet>();
+            if (home != null)
+            {
+                Debug.Log("Out of slingshots! Teleporting back to Home Planet.");
+                // Teleport player slightly above the home planet
+                transform.position = home.transform.position + transform.up * spawnVerticalOffset;
+                // Reset linear/angular velocities to prevent sliding on spawn
+                Rigidbody2D rb = GetComponent<Rigidbody2D>();
+                if (rb != null)
+                {
+                    rb.linearVelocity = Vector2.zero;
+                    rb.angularVelocity = 0f;
+                }
+                RefillSlingshots(5);
+            }
+        }
 
         public void Interact()
         {

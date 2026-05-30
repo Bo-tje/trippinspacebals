@@ -99,18 +99,11 @@ public class SlingShot : MonoBehaviour
             if (mouseDown)
             {
                 Vector3 mouseWorldPos = GetMouseWorldPosition();
+                currentPosition = CenterPosition + Vector3.ClampMagnitude(mouseWorldPos - CenterPosition, maxLength);
                 
-                // The aim position is where the user drags the mouse (into empty space)
-                Vector3 aimPos = CenterPosition + Vector3.ClampMagnitude(mouseWorldPos - CenterPosition, maxLength);
-                
-                // The visual band (currentPosition) is mirrored in the opposite direction
-                currentPosition = CenterPosition - (aimPos - CenterPosition);
-                
-                // Launch velocity is in the direction of the aim vector
-                Vector3 launchVelocity = (aimPos - CenterPosition) * force;
-                
+                Vector3 launchVelocity = (CenterPosition - currentPosition) * force;
                 float gravityScale = playerRb ? playerRb.gravityScale : 1f;
-                trajectoryLine.ShowTrajectory(playerRb ? playerRb.transform.position : CenterPosition, launchVelocity, gravityScale);
+                trajectoryLine.ShowTrajectory(playerRb ? playerRb.transform.position : currentPosition, launchVelocity, gravityScale);
                 
                 SetStrips(currentPosition);
             }
