@@ -9,7 +9,7 @@ public class PlanetInfo : MonoBehaviour
 
     [Header("Postcard Settings")]
     public bool isCustomPlanet = false;
-    public string postcardId;
+    public Postcard postcard;
     private bool _hasBeenVisited = false;
 
     private List<SlingShot> _placedSlingshots = new List<SlingShot>();
@@ -27,10 +27,10 @@ public class PlanetInfo : MonoBehaviour
 
     public void CollectPostcard()
     {
-        if (isCustomPlanet && !_hasBeenVisited)
+        if (isCustomPlanet && postcard != null && !_hasBeenVisited)
         {
             _hasBeenVisited = true;
-            SessionManager.Instance.CollectPostcard(postcardId);
+            SessionManager.Instance.CollectPostcard(postcard);
         }
     }
 }

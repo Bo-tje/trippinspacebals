@@ -6,8 +6,8 @@ public class SessionManager : MonoBehaviour
     public static SessionManager Instance { get; private set; }
 
     [Header("Progress Tracking")]
-    public List<string> albumPostcards = new List<string>();
-    public List<string> backpackPostcards = new List<string>();
+    public List<Postcard> albumPostcards = new List<Postcard>();
+    public List<Postcard> backpackPostcards = new List<Postcard>();
 
     private List<SlingShot> _sessionSlingshots = new List<SlingShot>();
     private List<SlingShot> _committedSlingshots = new List<SlingShot>();
@@ -25,12 +25,14 @@ public class SessionManager : MonoBehaviour
         }
     }
 
-    public void CollectPostcard(string id)
+    public void CollectPostcard(Postcard postcard)
     {
-        if (!backpackPostcards.Contains(id) && !albumPostcards.Contains(id))
+        if (postcard == null) return;
+
+        if (!backpackPostcards.Contains(postcard) && !albumPostcards.Contains(postcard))
         {
-            backpackPostcards.Add(id);
-            Debug.Log($"Postcard '{id}' added to backpack (Session).");
+            backpackPostcards.Add(postcard);
+            Debug.Log($"Postcard '{postcard.title}' added to backpack (Session).");
         }
     }
 
@@ -45,11 +47,11 @@ public class SessionManager : MonoBehaviour
     public void CommitSessionProgress()
     {
         // 1. Move postcards from backpack to permanent album
-        foreach (string id in backpackPostcards)
+        foreach (Postcard postcard in backpackPostcards)
         {
-            if (!albumPostcards.Contains(id))
+            if (!albumPostcards.Contains(postcard))
             {
-                albumPostcards.Add(id);
+                albumPostcards.Add(postcard);
             }
         }
         backpackPostcards.Clear();
@@ -95,7 +97,11 @@ public class SessionManager : MonoBehaviour
         
         if (placer != null && home != null)
         {
-            // Reset player velocity and position
+            // Reset player position and rotation to stand upright on top of home planet
+            placer.transform.position = home.transform.position + Vector3.up * 1.5f;
+            placer.transform.rotation = Quaternion.identity;
+
+            // Reset player velocity and angular spin
             Rigidbody2D rb = placer.GetComponent<Rigidbody2D>();
             if (rb != null)
             {
@@ -103,8 +109,6 @@ public class SessionManager : MonoBehaviour
                 rb.angularVelocity = 0f;
             }
             
-            // Align placement offset upward from home planet
-            placer.transform.position = home.transform.position + placer.transform.up * 1.5f;
             placer.RefillSlingshots(5);
         }
     }

@@ -49,7 +49,7 @@ MonoBehaviour:
   - {fileID: 7011950984188858687, guid: 82d78ef3b5c7a5943ab4203b27ccf683, type: 3}
   - {fileID: 7011950984188858687, guid: 82d78ef3b5c7a5943ab4203b27ccf683, type: 3}
   fillerPlanetPrefabs:
-  - {fileID: 6043183179806312636, guid: dd7fb7b783e05cc4f84f2338a8e44669, type: 3}
+  - {fileID: 7011950984188858687, guid: 0f08315ad8f5aea48b7c58fd6bb08de4, type: 3}
   fillerPlanetCount: 37
   minFillerScale: 5.4
   maxFillerScale: 9.3

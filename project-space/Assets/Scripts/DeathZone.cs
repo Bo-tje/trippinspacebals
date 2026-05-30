@@ -15,11 +15,7 @@ public class DeathZone : MonoBehaviour
     private void CheckAndTriggerDeath(GameObject obj)
     {
         // If the player touches this hazard, kill them!
-        Player.PlayerController pc = obj.GetComponent<Player.PlayerController>();
-        if (pc == null && obj.attachedRigidbody != null)
-        {
-            pc = obj.attachedRigidbody.GetComponent<Player.PlayerController>();
-        }
+        Player.PlayerController pc = obj.GetComponentInParent<Player.PlayerController>();
 
         if (pc != null)
         {

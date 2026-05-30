@@ -103,7 +103,7 @@ GameObject:
   - component: {fileID: 576119406902623909}
   - component: {fileID: 3025137842448592095}
   - component: {fileID: 1044386571985467889}
-  - component: {fileID: 3854533765605971949}
+  - component: {fileID: 6302209523613631821}
   m_Layer: 0
   m_Name: Planet
   m_TagString: Planet
@@ -237,7 +237,7 @@ MonoBehaviour:
   gravityStrength: 12.5
   gravityRadius: 15.26
   useFalloff: 0
---- !u!114 &3854533765605971949
+--- !u!114 &6302209523613631821
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

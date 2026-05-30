@@ -20,10 +20,20 @@ namespace Player
 
         private void Update()
         {
-            // If out of slingshots and player presses R key, return home
-            if (slingshotsRemaining <= 0 && GetReturnHomeKeyPressed())
+            if (GetReturnHomeKeyPressed())
             {
-                ReturnHome();
+                if (_playerController != null)
+                {
+                    if (!_playerController.IsGrounded)
+                    {
+                        Debug.Log("Player manually chose to die/reset in space with R.");
+                        SessionManager.Instance.Die();
+                    }
+                    else if (slingshotsRemaining <= 0)
+                    {
+                        ReturnHome();
+                    }
+                }
             }
         }
 
