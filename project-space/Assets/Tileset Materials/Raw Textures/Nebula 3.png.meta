@@ -1,0 +1,1495 @@
+fileFormatVersion: 2
+guid: 65f99591d83f94942b61a42429efa07f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -827118077116251776
+    second: Nebula 3_0
+  - first:
+      213: -6825942169793658331
+    second: Nebula 3_1
+  - first:
+      213: 5224062214198208384
+    second: Nebula 3_2
+  - first:
+      213: 7779669086114566273
+    second: Nebula 3_3
+  - first:
+      213: 6344136021098093568
+    second: Nebula 3_4
+  - first:
+      213: 855748802324567919
+    second: Nebula 3_5
+  - first:
+      213: 2342587462170429678
+    second: Nebula 3_6
+  - first:
+      213: -4286961104765450799
+    second: Nebula 3_7
+  - first:
+      213: -1735588785209654851
+    second: Nebula 3_8
+  - first:
+      213: 8598221441981506066
+    second: Nebula 3_9
+  - first:
+      213: -4464176713926254765
+    second: Nebula 3_10
+  - first:
+      213: -1350718749328555561
+    second: Nebula 3_11
+  - first:
+      213: -5698417763520459255
+    second: Nebula 3_12
+  - first:
+      213: -3547383278532510455
+    second: Nebula 3_13
+  - first:
+      213: -6233874347642707149
+    second: Nebula 3_14
+  - first:
+      213: -2187055413687394435
+    second: Nebula 3_15
+  - first:
+      213: -2883995018127548678
+    second: Nebula 3_16
+  - first:
+      213: 2397847967606673302
+    second: Nebula 3_17
+  - first:
+      213: 61030679863492668
+    second: Nebula 3_18
+  - first:
+      213: 4326392868788449239
+    second: Nebula 3_19
+  - first:
+      213: -3568843690162653788
+    second: Nebula 3_20
+  - first:
+      213: -1164140759766565609
+    second: Nebula 3_21
+  - first:
+      213: 219043178714973613
+    second: Nebula 3_22
+  - first:
+      213: 2824412832737148579
+    second: Nebula 3_23
+  - first:
+      213: 2904238559816258853
+    second: Nebula 3_24
+  - first:
+      213: -5920909675353331236
+    second: Nebula 3_25
+  - first:
+      213: 7691201979805157200
+    second: Nebula 3_26
+  - first:
+      213: -6359474152838504494
+    second: Nebula 3_27
+  - first:
+      213: 6051803236158338606
+    second: Nebula 3_28
+  - first:
+      213: 885522808480770323
+    second: Nebula 3_29
+  - first:
+      213: 6593664335385951009
+    second: Nebula 3_30
+  - first:
+      213: -3055201790618933181
+    second: Nebula 3_31
+  - first:
+      213: -3568116958349285969
+    second: Nebula 3_32
+  - first:
+      213: 1460259817068015631
+    second: Nebula 3_33
+  - first:
+      213: 1581928586131999319
+    second: Nebula 3_34
+  - first:
+      213: 2124525610763056642
+    second: Nebula 3_35
+  - first:
+      213: 692983114726660818
+    second: Nebula 3_36
+  - first:
+      213: 355284103090371075
+    second: Nebula 3_37
+  - first:
+      213: 5246933543075314249
+    second: Nebula 3_38
+  - first:
+      213: -8650584154626660736
+    second: Nebula 3_39
+  - first:
+      213: -7476367953955025587
+    second: Nebula 3_40
+  - first:
+      213: 5278310124139551045
+    second: Nebula 3_41
+  - first:
+      213: 4948973664718273397
+    second: Nebula 3_42
+  - first:
+      213: 5440370811749468172
+    second: Nebula 3_43
+  - first:
+      213: 4527998595890920659
+    second: Nebula 3_44
+  - first:
+      213: -2784484657781295832
+    second: Nebula 3_45
+  - first:
+      213: -8981786768952377086
+    second: Nebula 3_46
+  - first:
+      213: 1766805777449433263
+    second: Nebula 3_47
+  - first:
+      213: -1782842329563082388
+    second: Nebula 3_48
+  - first:
+      213: 436178213969397217
+    second: Nebula 3_49
+  - first:
+      213: 7051252758763701489
+    second: Nebula 3_50
+  - first:
+      213: -5764786013730049291
+    second: Nebula 3_51
+  - first:
+      213: -8836532419096622234
+    second: Nebula 3_52
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Nebula 3_0
+      rect:
+        serializedVersion: 2
+        x: 2296
+        y: 3674
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0818e2abd7c7584f0800000000000000
+      internalID: -827118077116251776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nebula 3_1
+      rect:
+        serializedVersion: 2
+        x: 2344
+        y: 3666
+        width: 14
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 522071013c16541a0800000000000000
+      internalID: -6825942169793658331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nebula 3_2
+      rect:
+        serializedVersion: 2
+        x: 2352
+        y: 3685
+        width: 19
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08723d1d7e89f7840800000000000000
+      internalID: 5224062214198208384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nebula 3_3
+      rect:
+        serializedVersion: 2
+        x: 2315
+        y: 3667
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18052fbb0dfe6fb60800000000000000
+      internalID: 7779669086114566273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nebula 3_4
+      rect:
+        serializedVersion: 2
+        x: 2362
+        y: 3673
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00cdf483916ea0850800000000000000
+      internalID: 6344136021098093568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nebula 3_5
+      rect:
+        serializedVersion: 2
+        x: 2376
+        y: 3667
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f679583700b30eb00800000000000000
+      internalID: 855748802324567919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nebula 3_6
+      rect:
+        serializedVersion: 2
+        x: 2385
+        y: 3650
+        width: 29
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee8c3f1a2ea828020800000000000000
+      internalID: 2342587462170429678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nebula 3_7
+      rect:
+        serializedVersion: 2
+        x: 2387
+        y: 3674
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d50a88a697a184c0800000000000000
+      internalID: -4286961104765450799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nebula 3_8
+      rect:
+        serializedVersion: 2
+        x: 2506
+        y: 3673
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db14d650233f9e7e0800000000000000
+      internalID: -1735588785209654851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nebula 3_9
+      rect:
+        serializedVersion: 2
+        x: 581
+        y: 392
+        width: 3328
+        height: 3280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 212647d98d4035770800000000000000
+      internalID: 8598221441981506066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nebula 3_10
+      rect:
+        serializedVersion: 2
+        x: 2500
+        y: 3666
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35fdadf4eee0c02c0800000000000000
+      internalID: -4464176713926254765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nebula 3_11
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 2466
+        width: 113
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d1cfc23478414de0800000000000000
+      internalID: -1350718749328555561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nebula 3_12
+      rect:
+        serializedVersion: 2
+        x: 3777
+        y: 2201
+        width: 142
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90e469f4c372be0b0800000000000000
+      internalID: -5698417763520459255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nebula 3_13
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 2099
+        width: 31
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90db8e8f3b925cec0800000000000000
+      internalID: -3547383278532510455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nebula 3_14
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 2093
+        width: 36
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 333265e2f44dc79a0800000000000000
+      internalID: -6233874347642707149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nebula 3_15
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 2082
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7f511350b406a1e0800000000000000
+      internalID: -2187055413687394435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nebula 3_16
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 2050
+        width: 35
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afed282afcdf9f7d0800000000000000
+      internalID: -2883995018127548678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nebula 3_17
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 2008
+        width: 19
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69f869ea50ed64120800000000000000
+      internalID: 2397847967606673302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nebula 3_18
+      rect:
+        serializedVersion: 2
+        x: 509
+        y: 1976
+        width: 34
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c300aa97413d8d000800000000000000
+      internalID: 61030679863492668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nebula 3_19
+      rect:
+        serializedVersion: 2
+        x: 3896
+        y: 2012
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7df2be6546f6a0c30800000000000000
+      internalID: 4326392868788449239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nebula 3_20
+      rect:
+        serializedVersion: 2
+        x: 3898
+        y: 2003
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a5f5f4829be87ec0800000000000000
+      internalID: -3568843690162653788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nebula 3_21
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 1920
+        width: 96
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71d7f89952428dfe0800000000000000
+      internalID: -1164140759766565609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nebula 3_22
+      rect:
+        serializedVersion: 2
+        x: 3899
+        y: 1990
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da547c94c923a0300800000000000000
+      internalID: 219043178714973613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nebula 3_23
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 1948
+        width: 53
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ae3a5ac184523720800000000000000
+      internalID: 2824412832737148579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nebula 3_24
+      rect:
+        serializedVersion: 2
+        x: 3899
+        y: 1963
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52517d4359ded4820800000000000000
+      internalID: 2904238559816258853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nebula 3_25
+      rect:
+        serializedVersion: 2
+        x: 3902
+        y: 1959
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd924654504b4dda0800000000000000
+      internalID: -5920909675353331236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nebula 3_26
+      rect:
+        serializedVersion: 2
+        x: 3908
+        y: 1962
+        width: 14
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 057411e6373acba60800000000000000
+      internalID: 7691201979805157200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nebula 3_27
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 1933
+        width: 26
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2df58c1b3fb9eb7a0800000000000000
+      internalID: -6359474152838504494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nebula 3_28
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 1872
+        width: 48
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e26f6cdbaf25cf350800000000000000
+      internalID: 6051803236158338606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nebula 3_29
+      rect:
+        serializedVersion: 2
+        x: 1485
+        y: 325
+        width: 89
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 319a0087d420a4c00800000000000000
+      internalID: 885522808480770323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nebula 3_30
+      rect:
+        serializedVersion: 2
+        x: 1990
+        y: 409
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12b77de37c6618b50800000000000000
+      internalID: 6593664335385951009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nebula 3_31
+      rect:
+        serializedVersion: 2
+        x: 2050
+        y: 413
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3486509982eb995d0800000000000000
+      internalID: -3055201790618933181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nebula 3_32
+      rect:
+        serializedVersion: 2
+        x: 2087
+        y: 403
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa52b84f7808b7ec0800000000000000
+      internalID: -3568116958349285969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nebula 3_33
+      rect:
+        serializedVersion: 2
+        x: 2173
+        y: 410
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f00bd1c1192e34410800000000000000
+      internalID: 1460259817068015631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nebula 3_34
+      rect:
+        serializedVersion: 2
+        x: 2190
+        y: 413
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75a0f6ceaa324f510800000000000000
+      internalID: 1581928586131999319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nebula 3_35
+      rect:
+        serializedVersion: 2
+        x: 2204
+        y: 400
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20670c969c4db7d10800000000000000
+      internalID: 2124525610763056642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nebula 3_36
+      rect:
+        serializedVersion: 2
+        x: 2217
+        y: 399
+        width: 24
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2da50a4a878fd9900800000000000000
+      internalID: 692983114726660818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nebula 3_37
+      rect:
+        serializedVersion: 2
+        x: 2260
+        y: 391
+        width: 26
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30a7b0762093ee400800000000000000
+      internalID: 355284103090371075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nebula 3_38
+      rect:
+        serializedVersion: 2
+        x: 2296
+        y: 403
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94af51b024ad0d840800000000000000
+      internalID: 5246933543075314249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nebula 3_39
+      rect:
+        serializedVersion: 2
+        x: 2375
+        y: 410
+        width: 20
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 086eadb4b83f2f780800000000000000
+      internalID: -8650584154626660736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nebula 3_40
+      rect:
+        serializedVersion: 2
+        x: 2417
+        y: 411
+        width: 15
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4d856615fa9e3890800000000000000
+      internalID: -7476367953955025587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nebula 3_41
+      rect:
+        serializedVersion: 2
+        x: 3390
+        y: 380
+        width: 113
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5499fab9713504940800000000000000
+      internalID: 5278310124139551045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nebula 3_42
+      rect:
+        serializedVersion: 2
+        x: 1983
+        y: 402
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57bbb48c3594ea440800000000000000
+      internalID: 4948973664718273397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nebula 3_43
+      rect:
+        serializedVersion: 2
+        x: 2375
+        y: 403
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c080bb0dd64108b40800000000000000
+      internalID: 5440370811749468172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nebula 3_44
+      rect:
+        serializedVersion: 2
+        x: 1989
+        y: 392
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3dcbb8b8bbea6de30800000000000000
+      internalID: 4527998595890920659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nebula 3_45
+      rect:
+        serializedVersion: 2
+        x: 2106
+        y: 385
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 825bb62e4f58b59d0800000000000000
+      internalID: -2784484657781295832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nebula 3_46
+      rect:
+        serializedVersion: 2
+        x: 2306
+        y: 379
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2014a4c65884a5380800000000000000
+      internalID: -8981786768952377086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nebula 3_47
+      rect:
+        serializedVersion: 2
+        x: 2326
+        y: 387
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa83bff5e74f48810800000000000000
+      internalID: 1766805777449433263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nebula 3_48
+      rect:
+        serializedVersion: 2
+        x: 2496
+        y: 391
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c61dcdfd8521247e0800000000000000
+      internalID: -1782842329563082388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nebula 3_49
+      rect:
+        serializedVersion: 2
+        x: 2501
+        y: 386
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e5096e46cd9d0600800000000000000
+      internalID: 436178213969397217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nebula 3_50
+      rect:
+        serializedVersion: 2
+        x: 2150
+        y: 369
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f48a9366051bd160800000000000000
+      internalID: 7051252758763701489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nebula 3_51
+      rect:
+        serializedVersion: 2
+        x: 1590
+        y: 322
+        width: 39
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f2fa75e9ad5fffa0800000000000000
+      internalID: -5764786013730049291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nebula 3_52
+      rect:
+        serializedVersion: 2
+        x: 1735
+        y: 243
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66bc58135945e5580800000000000000
+      internalID: -8836532419096622234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Nebula 3_0: -827118077116251776
+      Nebula 3_1: -6825942169793658331
+      Nebula 3_10: -4464176713926254765
+      Nebula 3_11: -1350718749328555561
+      Nebula 3_12: -5698417763520459255
+      Nebula 3_13: -3547383278532510455
+      Nebula 3_14: -6233874347642707149
+      Nebula 3_15: -2187055413687394435
+      Nebula 3_16: -2883995018127548678
+      Nebula 3_17: 2397847967606673302
+      Nebula 3_18: 61030679863492668
+      Nebula 3_19: 4326392868788449239
+      Nebula 3_2: 5224062214198208384
+      Nebula 3_20: -3568843690162653788
+      Nebula 3_21: -1164140759766565609
+      Nebula 3_22: 219043178714973613
+      Nebula 3_23: 2824412832737148579
+      Nebula 3_24: 2904238559816258853
+      Nebula 3_25: -5920909675353331236
+      Nebula 3_26: 7691201979805157200
+      Nebula 3_27: -6359474152838504494
+      Nebula 3_28: 6051803236158338606
+      Nebula 3_29: 885522808480770323
+      Nebula 3_3: 7779669086114566273
+      Nebula 3_30: 6593664335385951009
+      Nebula 3_31: -3055201790618933181
+      Nebula 3_32: -3568116958349285969
+      Nebula 3_33: 1460259817068015631
+      Nebula 3_34: 1581928586131999319
+      Nebula 3_35: 2124525610763056642
+      Nebula 3_36: 692983114726660818
+      Nebula 3_37: 355284103090371075
+      Nebula 3_38: 5246933543075314249
+      Nebula 3_39: -8650584154626660736
+      Nebula 3_4: 6344136021098093568
+      Nebula 3_40: -7476367953955025587
+      Nebula 3_41: 5278310124139551045
+      Nebula 3_42: 4948973664718273397
+      Nebula 3_43: 5440370811749468172
+      Nebula 3_44: 4527998595890920659
+      Nebula 3_45: -2784484657781295832
+      Nebula 3_46: -8981786768952377086
+      Nebula 3_47: 1766805777449433263
+      Nebula 3_48: -1782842329563082388
+      Nebula 3_49: 436178213969397217
+      Nebula 3_5: 855748802324567919
+      Nebula 3_50: 7051252758763701489
+      Nebula 3_51: -5764786013730049291
+      Nebula 3_52: -8836532419096622234
+      Nebula 3_6: 2342587462170429678
+      Nebula 3_7: -4286961104765450799
+      Nebula 3_8: -1735588785209654851
+      Nebula 3_9: 8598221441981506066
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
