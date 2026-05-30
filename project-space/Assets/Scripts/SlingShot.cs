@@ -99,11 +99,18 @@ public class SlingShot : MonoBehaviour
             if (mouseDown)
             {
                 Vector3 mouseWorldPos = GetMouseWorldPosition();
-                currentPosition = CenterPosition + Vector3.ClampMagnitude(mouseWorldPos - CenterPosition, maxLength);
                 
-                Vector3 launchVelocity = (CenterPosition - currentPosition) * force;
+                // The aim position is where the user drags the mouse (into empty space)
+                Vector3 aimPos = CenterPosition + Vector3.ClampMagnitude(mouseWorldPos - CenterPosition, maxLength);
+                
+                // The visual band (currentPosition) is mirrored in the opposite direction
+                currentPosition = CenterPosition - (aimPos - CenterPosition);
+                
+                // Launch velocity is in the direction of the aim vector
+                Vector3 launchVelocity = (aimPos - CenterPosition) * force;
+                
                 float gravityScale = playerRb ? playerRb.gravityScale : 1f;
-                trajectoryLine.ShowTrajectory(playerRb ? playerRb.transform.position : currentPosition, launchVelocity, gravityScale);
+                trajectoryLine.ShowTrajectory(playerRb ? playerRb.transform.position : CenterPosition, launchVelocity, gravityScale);
                 
                 SetStrips(currentPosition);
             }
@@ -117,6 +124,10 @@ public class SlingShot : MonoBehaviour
     }
 
     private bool _isDragging;
+
+    public bool IsDragging => _isDragging;
+    public Vector3 Center => CenterPosition;
+    public Vector3 CurrentPullPosition => currentPosition;
 
     private bool GetMouseButton()
     {
