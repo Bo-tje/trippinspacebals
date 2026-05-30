@@ -40,12 +40,50 @@ namespace Player
                 return;
             }
 
-            // Place slingshot at player's current position plus vertical offset
-            Vector3 spawnPosition = transform.position + Vector3.up * spawnVerticalOffset;
-            Instantiate(slingshotPrefab, spawnPosition, Quaternion.identity);
+            // Check if we are near a planet and if it allows more placements
+            GameObject nearestPlanet = GetNearestPlanet();
+            PlanetInfo planetInfo = null;
+            if (nearestPlanet != null)
+            {
+                planetInfo = nearestPlanet.GetComponent<PlanetInfo>();
+                if (planetInfo != null && !planetInfo.CanPlaceSlingshot)
+                {
+                    Debug.Log($"Cannot place slingshot! This planet is limited to {planetInfo.maxSlingshotsAllowed} slingshots.");
+                    return;
+                }
+            }
+
+            // Place slingshot at player's current position plus local vertical offset, aligned to planet surface
+            Vector3 spawnPosition = transform.position + transform.up * spawnVerticalOffset;
+            GameObject newSlingshot = Instantiate(slingshotPrefab, spawnPosition, transform.rotation);
             slingshotsRemaining--;
 
+            // Register with the planet
+            if (planetInfo != null)
+            {
+                SlingShot ss = newSlingshot.GetComponent<SlingShot>();
+                planetInfo.RegisterSlingshot(ss);
+            }
+
             Debug.Log($"Placed a slingshot! Slingshots remaining: {slingshotsRemaining}");
+        }
+
+        private GameObject GetNearestPlanet()
+        {
+            GameObject[] planets = GameObject.FindGameObjectsWithTag("Planet");
+            GameObject nearestPlanet = null;
+            float minDistance = float.MaxValue;
+
+            foreach (GameObject planet in planets)
+            {
+                float dist = Vector3.Distance(transform.position, planet.transform.position);
+                if (dist < minDistance)
+                {
+                    minDistance = dist;
+                    nearestPlanet = planet;
+                }
+            }
+            return nearestPlanet;
         }
 
         private void OnTriggerEnter2D(Collider2D other)
