@@ -7,6 +7,11 @@ public class PlanetInfo : MonoBehaviour
     [Tooltip("Maximum number of slingshots allowed to be placed on this planet.")]
     public int maxSlingshotsAllowed = 3;
 
+    [Header("Postcard Settings")]
+    public bool isCustomPlanet = false;
+    public string postcardId;
+    private bool _hasBeenVisited = false;
+
     private List<SlingShot> _placedSlingshots = new List<SlingShot>();
 
     public bool CanPlaceSlingshot => _placedSlingshots.Count < maxSlingshotsAllowed;
@@ -17,6 +22,15 @@ public class PlanetInfo : MonoBehaviour
         if (slingshot != null && !_placedSlingshots.Contains(slingshot))
         {
             _placedSlingshots.Add(slingshot);
+        }
+    }
+
+    public void CollectPostcard()
+    {
+        if (isCustomPlanet && !_hasBeenVisited)
+        {
+            _hasBeenVisited = true;
+            SessionManager.Instance.CollectPostcard(postcardId);
         }
     }
 }

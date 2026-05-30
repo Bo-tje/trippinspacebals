@@ -102,6 +102,13 @@ namespace Player
         private void OnCollisionEnter2D(Collision2D collision)
         {
             _isGrounded = true;
+            
+            // Try to collect a postcard if landing on a custom planet
+            PlanetInfo planetInfo = collision.gameObject.GetComponent<PlanetInfo>();
+            if (planetInfo != null)
+            {
+                planetInfo.CollectPostcard();
+            }
         }
 
         private void OnCollisionStay2D(Collision2D collision)

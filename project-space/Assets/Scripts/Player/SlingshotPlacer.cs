@@ -57,6 +57,7 @@ namespace Player
                     rb.linearVelocity = Vector2.zero;
                     rb.angularVelocity = 0f;
                 }
+                SessionManager.Instance.CommitSessionProgress();
                 RefillSlingshots(5);
             }
         }
@@ -114,11 +115,15 @@ namespace Player
             GameObject newSlingshot = Instantiate(slingshotPrefab, spawnPosition, transform.rotation);
             slingshotsRemaining--;
 
-            // Register with the planet
-            if (planetInfo != null)
+            // Register with the planet and session manager
+            SlingShot ss = newSlingshot.GetComponent<SlingShot>();
+            if (ss != null)
             {
-                SlingShot ss = newSlingshot.GetComponent<SlingShot>();
-                planetInfo.RegisterSlingshot(ss);
+                SessionManager.Instance.RegisterSessionSlingshot(ss);
+                if (planetInfo != null)
+                {
+                    planetInfo.RegisterSlingshot(ss);
+                }
             }
 
             Debug.Log($"Placed a slingshot! Slingshots remaining: {slingshotsRemaining}");

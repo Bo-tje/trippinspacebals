@@ -19,6 +19,7 @@ public class HomePlanet : MonoBehaviour
         if (placer != null)
         {
             placer.RefillSlingshots(refillAmount);
+            SessionManager.Instance.CommitSessionProgress();
         }
     }
 }
