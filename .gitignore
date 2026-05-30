@@ -113,3 +113,8 @@ ServerData/
 # IDE files
 .idea/
 .vscode/
+
+.gemini/
+gha-creds-*.json
+.github/commands
+.github/workflows

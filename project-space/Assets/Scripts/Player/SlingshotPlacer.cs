@@ -20,10 +20,20 @@ namespace Player
 
         private void Update()
         {
-            // If out of slingshots and player presses R key, return home
-            if (slingshotsRemaining <= 0 && GetReturnHomeKeyPressed())
+            if (GetReturnHomeKeyPressed())
             {
-                ReturnHome();
+                if (_playerController != null)
+                {
+                    if (!_playerController.IsGrounded)
+                    {
+                        Debug.Log("Player manually chose to die/reset in space with R.");
+                        SessionManager.Instance.Die();
+                    }
+                    else if (slingshotsRemaining <= 0)
+                    {
+                        ReturnHome();
+                    }
+                }
             }
         }
 
@@ -57,6 +67,7 @@ namespace Player
                     rb.linearVelocity = Vector2.zero;
                     rb.angularVelocity = 0f;
                 }
+                SessionManager.Instance.CommitSessionProgress();
                 RefillSlingshots(5);
             }
         }
@@ -114,11 +125,15 @@ namespace Player
             GameObject newSlingshot = Instantiate(slingshotPrefab, spawnPosition, transform.rotation);
             slingshotsRemaining--;
 
-            // Register with the planet
-            if (planetInfo != null)
+            // Register with the planet and session manager
+            SlingShot ss = newSlingshot.GetComponent<SlingShot>();
+            if (ss != null)
             {
-                SlingShot ss = newSlingshot.GetComponent<SlingShot>();
-                planetInfo.RegisterSlingshot(ss);
+                SessionManager.Instance.RegisterSessionSlingshot(ss);
+                if (planetInfo != null)
+                {
+                    planetInfo.RegisterSlingshot(ss);
+                }
             }
 
             Debug.Log($"Placed a slingshot! Slingshots remaining: {slingshotsRemaining}");
