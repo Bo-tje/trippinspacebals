@@ -32,7 +32,11 @@ public class SessionManager : MonoBehaviour
         if (!backpackPostcards.Contains(postcard) && !albumPostcards.Contains(postcard))
         {
             backpackPostcards.Add(postcard);
-            Debug.Log($"Postcard '{postcard.title}' added to backpack (Session).");
+            Debug.Log($"[POSTCARD] Collected '{postcard.title}' (ID: {postcard.id}). Added to backpack! (Backpack Count: {backpackPostcards.Count})");
+        }
+        else
+        {
+            Debug.Log($"[POSTCARD] Already collected or in backpack: '{postcard.title}'");
         }
     }
 
@@ -46,12 +50,14 @@ public class SessionManager : MonoBehaviour
 
     public void CommitSessionProgress()
     {
+        Debug.Log($"[SESSION] Committing progress. Backpack contains {backpackPostcards.Count} postcards.");
         // 1. Move postcards from backpack to permanent album
         foreach (Postcard postcard in backpackPostcards)
         {
             if (!albumPostcards.Contains(postcard))
             {
                 albumPostcards.Add(postcard);
+                Debug.Log($"[SESSION] Postcard '{postcard.title}' committed to permanent Album!");
             }
         }
         backpackPostcards.Clear();

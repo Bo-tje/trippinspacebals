@@ -104,7 +104,7 @@ namespace Player
             _isGrounded = true;
             
             // Try to collect a postcard if landing on a custom planet
-            PlanetInfo planetInfo = collision.gameObject.GetComponent<PlanetInfo>();
+            PlanetInfo planetInfo = collision.gameObject.GetComponentInParent<PlanetInfo>();
             if (planetInfo != null)
             {
                 planetInfo.CollectPostcard();

@@ -9,12 +9,8 @@ public class HomePlanet : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        // Try to find the SlingshotPlacer on the colliding object
-        SlingshotPlacer placer = collision.gameObject.GetComponent<SlingshotPlacer>();
-        if (placer == null && collision.rigidbody != null)
-        {
-            placer = collision.rigidbody.GetComponent<SlingshotPlacer>();
-        }
+        // Try to find the SlingshotPlacer on the colliding object or parent
+        SlingshotPlacer placer = collision.gameObject.GetComponentInParent<SlingshotPlacer>();
 
         if (placer != null)
         {

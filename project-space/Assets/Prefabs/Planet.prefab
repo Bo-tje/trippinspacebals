@@ -234,8 +234,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 319b6939e49b3364c8cdcc0e5512ce1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlanetGravity
-  gravityStrength: 12.5
-  gravityRadius: 15.26
+  gravityStrength: 13.3
+  gravityRadius: 12
   useFalloff: 0
 --- !u!114 &6302209523613631821
 MonoBehaviour:
@@ -250,3 +250,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlanetInfo
   maxSlingshotsAllowed: 3
+  isCustomPlanet: 0
+  postcard: {fileID: 0}

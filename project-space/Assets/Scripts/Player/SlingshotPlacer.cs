@@ -13,6 +13,8 @@ namespace Player
         private SlingShot _nearbySlingshot;
         private PlayerController _playerController;
 
+        private float _timeUngrounded = 0f;
+
         private void Awake()
         {
             _playerController = GetComponent<PlayerController>();
@@ -20,16 +22,30 @@ namespace Player
 
         private void Update()
         {
+            if (_playerController != null)
+            {
+                if (_playerController.IsGrounded)
+                {
+                    _timeUngrounded = 0f;
+                }
+                else
+                {
+                    _timeUngrounded += Time.deltaTime;
+                }
+            }
+
             if (GetReturnHomeKeyPressed())
             {
                 if (_playerController != null)
                 {
-                    if (!_playerController.IsGrounded)
+                    // Only trigger Die() if they are actually floating in space (ungrounded for > 0.5s)
+                    if (!_playerController.IsGrounded && _timeUngrounded >= 0.5f)
                     {
-                        Debug.Log("Player manually chose to die/reset in space with R.");
+                        Debug.Log("Player manually chose to die/reset in space with R after floating.");
                         SessionManager.Instance.Die();
                     }
-                    else if (slingshotsRemaining <= 0)
+                    // If grounded or in a micro-hop, treat it as a safe hitchhike back home if out of ammo
+                    else if ((_playerController.IsGrounded || _timeUngrounded < 0.5f) && slingshotsRemaining <= 0)
                     {
                         ReturnHome();
                     }

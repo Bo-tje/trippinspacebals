@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Postcard
   id: test
   title: 
-  image: {fileID: 0}
+  image: {fileID: -3331418886367676696, guid: 547683de4c3227f40bc29f191b130387, type: 3}
   description: 
