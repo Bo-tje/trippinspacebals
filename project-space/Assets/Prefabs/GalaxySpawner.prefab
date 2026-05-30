@@ -55,5 +55,5 @@ MonoBehaviour:
   maxFillerScale: 9.3
   randomizeFillerColor: 1
   spawnAreaSize: {x: 200, y: 200}
-  minimumSpacing: 20
+  minimumSpacing: 15
   spawnAreaCenter: {x: 0, y: 0, z: 0}
