@@ -33,6 +33,13 @@ public class SessionManager : MonoBehaviour
         {
             backpackPostcards.Add(postcard);
             Debug.Log($"[POSTCARD] Collected '{postcard.title}' (ID: {postcard.id}). Added to backpack! (Backpack Count: {backpackPostcards.Count})");
+            
+            // Trigger the UI popup showcase!
+            GameUIController ui = FindFirstObjectByType<GameUIController>();
+            if (ui != null)
+            {
+                ui.ShowNewPostcardPopup(postcard);
+            }
         }
         else
         {

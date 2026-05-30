@@ -20,6 +20,13 @@ public class GameUIController : MonoBehaviour
     [SerializeField] private List<Postcard> expectedPostcards = new List<Postcard>();
     [SerializeField] private Sprite emptySlotSprite;
 
+    [Header("Postcard Popup Showcase")]
+    [SerializeField] private GameObject postcardPopupPanel;
+    [SerializeField] private Image popupImage;
+    [SerializeField] private TextMeshProUGUI popupTitleText;
+    [SerializeField] private TextMeshProUGUI popupDescriptionText;
+    [SerializeField] private Button closePopupButton;
+
     [Header("UI Tweak Settings")]
     [Tooltip("Delay in seconds before UI shows the restart/death prompt when airborne to prevent flicker on micro-hops.")]
     [SerializeField] private float ungroundedPromptDelay = 0.5f;
@@ -42,9 +49,15 @@ public class GameUIController : MonoBehaviour
         if (closeAlbumButton != null)
             closeAlbumButton.onClick.AddListener(CloseAlbum);
 
-        // Ensure album is closed at start
+        if (closePopupButton != null)
+            closePopupButton.onClick.AddListener(ClosePostcardPopup);
+
+        // Ensure screens are closed at start
         if (albumPanel != null)
             albumPanel.SetActive(false);
+
+        if (postcardPopupPanel != null)
+            postcardPopupPanel.SetActive(false);
     }
 
     private void Update()
@@ -55,6 +68,63 @@ public class GameUIController : MonoBehaviour
         if (_isAlbumOpen && Input.GetKeyDown(KeyCode.Escape))
         {
             CloseAlbum();
+        }
+
+        // Close postcard popup with Escape, Enter, or Space
+        if (postcardPopupPanel != null && postcardPopupPanel.activeSelf)
+        {
+            if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Space))
+            {
+                ClosePostcardPopup();
+            }
+        }
+    }
+
+    public void ShowNewPostcardPopup(Postcard postcard)
+    {
+        if (postcard == null) return;
+
+        Debug.Log($"[POSTCARD UI] Showing big popup showcase for '{postcard.title}'");
+
+        if (postcardPopupPanel != null)
+        {
+            postcardPopupPanel.SetActive(true);
+
+            if (popupImage != null)
+            {
+                popupImage.sprite = postcard.image;
+                popupImage.color = Color.white;
+            }
+            if (popupTitleText != null)
+            {
+                popupTitleText.text = postcard.title;
+            }
+            if (popupDescriptionText != null)
+            {
+                popupDescriptionText.text = postcard.description;
+            }
+
+            // Disable player input while viewing showcase
+            //if (_player != null)
+            //{
+            //    _player.enabled = false;
+           // }
+        }
+    }
+
+    public void ClosePostcardPopup()
+    {
+        Debug.Log("[POSTCARD UI] Closing big popup showcase.");
+
+        if (postcardPopupPanel != null)
+        {
+            postcardPopupPanel.SetActive(false);
+
+            // Re-enable player input if the album isn't also open
+            //if (_player != null && !_isAlbumOpen)
+            //{
+            //    _player.enabled = true;
+           // }
         }
     }
 
@@ -126,10 +196,10 @@ public class GameUIController : MonoBehaviour
         PopulateAlbum();
 
         // Optionally pause player input or freeze movement when looking at album
-        if (_player != null)
-        {
-            _player.enabled = false;
-        }
+        //if (_player != null)
+       // {
+       //     _player.enabled = false;
+       // }
     }
 
     public void CloseAlbum()
@@ -140,10 +210,10 @@ public class GameUIController : MonoBehaviour
             albumPanel.SetActive(false);
 
         // Resume player input
-        if (_player != null)
-        {
-            _player.enabled = true;
-        }
+       // if (_player != null)
+        //{
+        //    _player.enabled = true;
+        //}
     }
 
     private void PopulateAlbum()

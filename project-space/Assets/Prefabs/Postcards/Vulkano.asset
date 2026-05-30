@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 10ad794f9e3429d44840222c8b7c21e2, type: 3}
-  m_Name: test
+  m_Name: Vulkano
   m_EditorClassIdentifier: Assembly-CSharp::Postcard
-  id: test
+  id: Vulkano
   title: 
-  image: {fileID: -3331418886367676696, guid: 547683de4c3227f40bc29f191b130387, type: 3}
+  image: {fileID: -3757973460883456851, guid: 2c0dbd5fbf0d97142bff95fce49ce762, type: 3}
   description: 

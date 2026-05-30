@@ -1,0 +1,507 @@
+fileFormatVersion: 2
+guid: 179464961c601054488f75e59d880966
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4621987781688406826
+    second: whiteshit_0
+  - first:
+      213: 280262759838164996
+    second: whiteshit_1
+  - first:
+      213: 4463300264167543252
+    second: whiteshit_2
+  - first:
+      213: -6201698388371070395
+    second: whiteshit_3
+  - first:
+      213: 6998724189398339309
+    second: whiteshit_4
+  - first:
+      213: 5603118457929030926
+    second: whiteshit_5
+  - first:
+      213: 6998246024452574153
+    second: whiteshit_6
+  - first:
+      213: 7631351606880712172
+    second: whiteshit_7
+  - first:
+      213: 2053935738364819920
+    second: whiteshit_8
+  - first:
+      213: -7568970980181513129
+    second: whiteshit_9
+  - first:
+      213: 2283723511070375027
+    second: whiteshit_10
+  - first:
+      213: -9092363823074580199
+    second: whiteshit_11
+  - first:
+      213: -7230728634745085767
+    second: whiteshit_12
+  - first:
+      213: -6751136572773521990
+    second: whiteshit_13
+  - first:
+      213: 5235590960640650664
+    second: whiteshit_14
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: whiteshit_0
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 151
+        width: 1889
+        height: 1781
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6dc4444d9966bdfb0800000000000000
+      internalID: -4621987781688406826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: whiteshit_1
+      rect:
+        serializedVersion: 2
+        x: 1670
+        y: 1436
+        width: 155
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 408ace3ce71b3e300800000000000000
+      internalID: 280262759838164996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: whiteshit_2
+      rect:
+        serializedVersion: 2
+        x: 1718
+        y: 1320
+        width: 122
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d11d9351f3d0fd30800000000000000
+      internalID: 4463300264167543252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: whiteshit_3
+      rect:
+        serializedVersion: 2
+        x: 1483
+        y: 605
+        width: 350
+        height: 358
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 542a70d7c242fe9a0800000000000000
+      internalID: -6201698388371070395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: whiteshit_4
+      rect:
+        serializedVersion: 2
+        x: 1661
+        y: 933
+        width: 262
+        height: 340
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dee8506c196702160800000000000000
+      internalID: 6998724189398339309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: whiteshit_5
+      rect:
+        serializedVersion: 2
+        x: 1736
+        y: 857
+        width: 157
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0d5b470d8642cd40800000000000000
+      internalID: 5603118457929030926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: whiteshit_6
+      rect:
+        serializedVersion: 2
+        x: 1858
+        y: 756
+        width: 66
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9cb09425ea3ce1160800000000000000
+      internalID: 6998246024452574153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: whiteshit_7
+      rect:
+        serializedVersion: 2
+        x: 1817
+        y: 724
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce53b349ad108e960800000000000000
+      internalID: 7631351606880712172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: whiteshit_8
+      rect:
+        serializedVersion: 2
+        x: 1843
+        y: 656
+        width: 46
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d9f6bcfbab018c10800000000000000
+      internalID: 2053935738364819920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: whiteshit_9
+      rect:
+        serializedVersion: 2
+        x: 1852
+        y: 638
+        width: 12
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75c6a03eefc95f690800000000000000
+      internalID: -7568970980181513129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: whiteshit_10
+      rect:
+        serializedVersion: 2
+        x: 1698
+        y: 398
+        width: 210
+        height: 202
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37cbe820f6a61bf10800000000000000
+      internalID: 2283723511070375027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: whiteshit_11
+      rect:
+        serializedVersion: 2
+        x: 1807
+        y: 593
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 919e60db64f61d180800000000000000
+      internalID: -9092363823074580199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: whiteshit_12
+      rect:
+        serializedVersion: 2
+        x: 1661
+        y: 347
+        width: 63
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b026c2ed9a47ab90800000000000000
+      internalID: -7230728634745085767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: whiteshit_13
+      rect:
+        serializedVersion: 2
+        x: 1748
+        y: 307
+        width: 74
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab5afad5e052f42a0800000000000000
+      internalID: -6751136572773521990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: whiteshit_14
+      rect:
+        serializedVersion: 2
+        x: 1586
+        y: 173
+        width: 184
+        height: 142
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ad6b364d3e88a840800000000000000
+      internalID: 5235590960640650664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: fab8179ff45870842a5edd2956809712
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      whiteshit_0: -4621987781688406826
+      whiteshit_1: 280262759838164996
+      whiteshit_10: 2283723511070375027
+      whiteshit_11: -9092363823074580199
+      whiteshit_12: -7230728634745085767
+      whiteshit_13: -6751136572773521990
+      whiteshit_14: 5235590960640650664
+      whiteshit_2: 4463300264167543252
+      whiteshit_3: -6201698388371070395
+      whiteshit_4: 6998724189398339309
+      whiteshit_5: 5603118457929030926
+      whiteshit_6: 6998246024452574153
+      whiteshit_7: 7631351606880712172
+      whiteshit_8: 2053935738364819920
+      whiteshit_9: -7568970980181513129
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

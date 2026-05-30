@@ -45,12 +45,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlanetSpawner
   customPlanetPrefabs:
-  - {fileID: 7011950984188858687, guid: 82d78ef3b5c7a5943ab4203b27ccf683, type: 3}
-  - {fileID: 7011950984188858687, guid: 82d78ef3b5c7a5943ab4203b27ccf683, type: 3}
-  - {fileID: 7011950984188858687, guid: 82d78ef3b5c7a5943ab4203b27ccf683, type: 3}
+  - {fileID: 7011950984188858687, guid: c1926c0808ac6f54aabb3df463e7e062, type: 3}
+  - {fileID: 7011950984188858687, guid: 17078ddef83afee4abd50856a7be7ae7, type: 3}
+  - {fileID: 7011950984188858687, guid: 4511560ffd2a434488d9a96eb360de7c, type: 3}
+  - {fileID: 7011950984188858687, guid: c5d70ece0a197db4cb5bb4cc17fd62fc, type: 3}
+  - {fileID: 7011950984188858687, guid: e51fe4dcf0f0c0d4a9bbc4cea2912b48, type: 3}
+  - {fileID: 7011950984188858687, guid: a7100962c12be064bad0f2b9a55a245f, type: 3}
   fillerPlanetPrefabs:
   - {fileID: 7011950984188858687, guid: 0f08315ad8f5aea48b7c58fd6bb08de4, type: 3}
-  fillerPlanetCount: 37
+  fillerPlanetCount: 10
   minFillerScale: 5.4
   maxFillerScale: 9.3
   randomizeFillerColor: 1
