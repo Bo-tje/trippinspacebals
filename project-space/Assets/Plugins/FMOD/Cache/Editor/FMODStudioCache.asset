@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-5970150640826240835
+--- !u!114 &-3941882771867469179
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9,24 +9,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Photo
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/Photo
-  Guid:
-    Data1: -987043903
-    Data2: 1109566807
-    Data3: -1973229644
-    Data4: 1536937175
-  Banks:
-  - {fileID: -1437664434578212329}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 2038
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Main Theme/Nearby Planet
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
+  Name: Nearby Planet
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 1346974734
+    data2: 2540333199
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - None
+  - Cat
+  - Seal
+  - Blood
+  Exists: 1
 --- !u!114 &-2203388280510601577
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49,11 +50,11 @@ MonoBehaviour:
   - {fileID: -1437664434578212329}
   IsStream: 0
   Is3D: 0
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 1918
+  Length: 1950
 --- !u!114 &-1800184438039354949
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69,10 +70,10 @@ MonoBehaviour:
   Path: FMOD/GameJam Project/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639157734200000000
+  lastModified: 639157787100000000
   FileSizes:
   - Name: Desktop
-    Value: 942
+    Value: 1052
   Exists: 1
 --- !u!114 &-1437664434578212329
 MonoBehaviour:
@@ -89,10 +90,10 @@ MonoBehaviour:
   Path: FMOD/GameJam Project/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639157734200000000
+  lastModified: 639157787100000000
   FileSizes:
   - Name: Desktop
-    Value: 1527264
+    Value: 1344512
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -110,17 +111,18 @@ MonoBehaviour:
   - {fileID: -1800184438039354949}
   - {fileID: -1437664434578212329}
   EditorEvents:
-  - {fileID: 3671465888046116151}
   - {fileID: -2203388280510601577}
   - {fileID: 8425545919840701155}
-  - {fileID: -5970150640826240835}
   - {fileID: 324321229540138559}
+  - {fileID: 2184186138414785315}
+  - {fileID: 8072420584968919545}
+  - {fileID: 4056929158511324804}
   EditorParameters: []
   MasterBanks:
   - {fileID: -1437664434578212329}
   StringsBanks:
   - {fileID: -1800184438039354949}
-  cacheTime: 639157734200000000
+  cacheTime: 639157787100000000
   cacheVersion: 131621
 --- !u!114 &324321229540138559
 MonoBehaviour:
@@ -145,11 +147,12 @@ MonoBehaviour:
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
-  Parameters: []
+  Parameters:
+  - {fileID: -3941882771867469179}
   MinDistance: 1
   MaxDistance: 20
   Length: 15240
---- !u!114 &3671465888046116151
+--- !u!114 &2184186138414785315
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -159,23 +162,77 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Test Event
+  m_Name: event:/Slingshot Release
   m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/Test Event
+  Path: event:/Slingshot Release
   Guid:
-    Data1: 2073519490
-    Data2: 1226038590
-    Data3: -605701217
-    Data4: 1686804566
+    Data1: -687233619
+    Data2: 1130758619
+    Data3: 338365372
+    Data4: -1683929130
   Banks:
   - {fileID: -1437664434578212329}
-  IsStream: 1
+  IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 21818
+  Length: 196
+--- !u!114 &4056929158511324804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Build_Slingshot
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Build_Slingshot
+  Guid:
+    Data1: 288715977
+    Data2: 1092214917
+    Data3: -1630355322
+    Data4: -1173217125
+  Banks:
+  - {fileID: -1437664434578212329}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1798
+--- !u!114 &8072420584968919545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Paper
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Paper
+  Guid:
+    Data1: -987043903
+    Data2: 1109566807
+    Data3: -1973229644
+    Data4: 1536937175
+  Banks:
+  - {fileID: -1437664434578212329}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2450
 --- !u!114 &8425545919840701155
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -202,4 +259,4 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 1918
+  Length: 1950
