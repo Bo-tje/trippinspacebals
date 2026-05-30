@@ -254,7 +254,7 @@ MonoBehaviour:
   trajectoryLine: {fileID: 3305542070735629042}
   bandRenderer: {fileID: 8447979509802597792}
   maxLength: 2
-  force: 5
+  force: 10
   bandWidthOffset: 2
   playerPositionOffset: 0
   playerRb: {fileID: 0}

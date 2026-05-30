@@ -24,10 +24,10 @@ public class PlanetSpawner : MonoBehaviour
     public bool randomizeFillerColor = true;
 
     [Tooltip("Size of the rectangular box in space where planets can spawn.")]
-    public Vector2 spawnAreaSize = new Vector2(200f, 200f);
+    public Vector2 spawnAreaSize = new Vector2(120f, 120f);
 
     [Tooltip("Minimum distance between any two spawned planets to prevent overlap.")]
-    public float minimumSpacing = 30f;
+    public float minimumSpacing = 18f;
 
     [Tooltip("Center of the spawning area.")]
     public Vector3 spawnAreaCenter = Vector3.zero;
@@ -73,14 +73,29 @@ public class PlanetSpawner : MonoBehaviour
 
     private void SpawnPlanet(GameObject prefab, bool isFiller)
     {
-        int maxAttempts = 50; // Prevent infinite loops if spacing is too tight
+        int maxAttempts = 100; // Increase attempts to find a valid path location
         for (int attempt = 0; attempt < maxAttempts; attempt++)
         {
-            float randomX = Random.Range(-spawnAreaSize.x / 2f, spawnAreaSize.x / 2f);
-            float randomY = Random.Range(-spawnAreaSize.y / 2f, spawnAreaSize.y / 2f);
-            Vector3 potentialPosition = spawnAreaCenter + new Vector3(randomX, randomY, 0f);
+            Vector3 potentialPosition;
 
-            if (IsValidPosition(potentialPosition))
+            // Connected Spawning: pick a random already-spawned planet and place near it
+            if (_spawnedPositions.Count > 0)
+            {
+                Vector3 origin = _spawnedPositions[Random.Range(0, _spawnedPositions.Count)];
+                float distance = Random.Range(minimumSpacing, minimumSpacing * 1.5f);
+                float angle = Random.Range(0f, Mathf.PI * 2f);
+                potentialPosition = origin + new Vector3(Mathf.Cos(angle) * distance, Mathf.Sin(angle) * distance, 0f);
+            }
+            else
+            {
+                // Fallback for first planet if no home planet is found
+                float randomX = Random.Range(-spawnAreaSize.x / 4f, spawnAreaSize.x / 4f);
+                float randomY = Random.Range(-spawnAreaSize.y / 4f, spawnAreaSize.y / 4f);
+                potentialPosition = spawnAreaCenter + new Vector3(randomX, randomY, 0f);
+            }
+
+            // Ensure the position fits inside boundaries and doesn't overlap existing planets
+            if (IsWithinBounds(potentialPosition) && IsValidPosition(potentialPosition))
             {
                 GameObject newPlanet = Instantiate(prefab, potentialPosition, Quaternion.identity);
                 _spawnedPositions.Add(potentialPosition);
@@ -93,12 +108,12 @@ public class PlanetSpawner : MonoBehaviour
                     newPlanet.transform.localScale = Vector3.one * randomScale;
 
                     // Scale gravity properties proportionally
-                    PlanetGravity gravity = newPlanet.GetComponent<PlanetGravity>();
-                    if (gravity != null)
-                    {
-                        gravity.gravityRadius *= randomScale;
-                        gravity.gravityStrength *= randomScale;
-                    }
+                    //PlanetGravity gravity = newPlanet.GetComponent<PlanetGravity>();
+                    //if (gravity != null)
+                    //{
+                     //   gravity.gravityRadius *= randomScale;
+                    //    gravity.gravityStrength *= randomScale;
+                   // }
 
                     // 2. Randomize Color (HSV space for nice, vibrant tints)
                     if (randomizeFillerColor)
@@ -121,6 +136,16 @@ public class PlanetSpawner : MonoBehaviour
             }
         }
         Debug.LogWarning($"Could not find a valid position to spawn planet: {prefab.name}. Try increasing spawnAreaSize or decreasing minimumSpacing.");
+    }
+
+    private bool IsWithinBounds(Vector3 position)
+    {
+        float minX = spawnAreaCenter.x - spawnAreaSize.x / 2f;
+        float maxX = spawnAreaCenter.x + spawnAreaSize.x / 2f;
+        float minY = spawnAreaCenter.y - spawnAreaSize.y / 2f;
+        float maxY = spawnAreaCenter.y + spawnAreaSize.y / 2f;
+
+        return position.x >= minX && position.x <= maxX && position.y >= minY && position.y <= maxY;
     }
 
     private bool IsValidPosition(Vector3 position)

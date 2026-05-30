@@ -71,8 +71,15 @@ namespace Player
                 return;
             }
 
-            // Otherwise, place a new one at our feet
-            PlaceSlingshot();
+            // Otherwise, place a new one at our feet if we are grounded on a planet
+            if (_playerController != null && _playerController.IsGrounded)
+            {
+                PlaceSlingshot();
+            }
+            else
+            {
+                Debug.Log("Must be grounded on a planet to place a slingshot!");
+            }
         }
 
         private void PlaceSlingshot()

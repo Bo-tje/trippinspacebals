@@ -167,7 +167,11 @@ public class SlingShot : MonoBehaviour
             Vector3 playerForce = pullVector * force;
             playerRb.linearVelocity = playerForce;
 
-            if (playerCollider != null) playerCollider.enabled = true;
+            // Delayed re-enabling of player's collider to prevent launching collision blocks
+            if (playerCollider != null)
+            {
+                StartCoroutine(EnablePlayerColliderAfterDelay(playerCollider, 0.25f));
+            }
 
             // Re-enable player controllers/inputs
             PlayerController controller = playerRb.GetComponent<PlayerController>();
@@ -186,6 +190,15 @@ public class SlingShot : MonoBehaviour
         else
         {
             ResetPlayerToIdle();
+        }
+    }
+
+    private System.Collections.IEnumerator EnablePlayerColliderAfterDelay(Collider2D col, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        if (col != null)
+        {
+            col.enabled = true;
         }
     }
 

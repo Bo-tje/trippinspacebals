@@ -43,6 +43,14 @@ namespace Player
                 Vector2 localUp = -gravityDir;
                 float verticalSpeed = Vector2.Dot(_rigidbody.linearVelocity, localUp);
                 
+                // Grounding Snap: Apply a strong downward pull to glue the player to the curved shell
+                if (!_jumpRequested)
+                {
+                    _rigidbody.AddForce(gravityDir * 15f, ForceMode2D.Force);
+                    // Dampen any radial bouncy speed to keep them snapped
+                    if (verticalSpeed > 0f) verticalSpeed *= 0.5f;
+                }
+
                 // Horizontal speed along tangent
                 Vector2 horizontalVelocity = tangent * (_moveVector.x * movementSpeed);
                 
