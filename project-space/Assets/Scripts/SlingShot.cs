@@ -1,125 +1,233 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
+using Player;
 
 public class SlingShot : MonoBehaviour
 {
-    
+    [Header("Components")]
     public TrajectoryLine trajectoryLine;
-    
-    public LineRenderer[] lineRenderers;
-    public Transform[] stripPositions;
-    public Transform center;
-    public Transform idlePosition;
+   [SerializeField] private LineRenderer bandRenderer;
+    private Collider2D triggerCollider;
 
-    public Vector3 currentPosition;
+    [Header("Slingshot Settings")]
     public float maxLength = 10f;
-    public float bottomBoundary = 10f;
     public float force = 10f;
-    
-    public GameObject playerPrefab;
+    public float bandWidthOffset = 0.5f; // Left/right anchor distance from center
+    public float playerPositionOffset = 0.2f;
+
+    [Header("State")]
     public Rigidbody2D playerRb;
     public Collider2D playerCollider;
+    public Vector3 currentPosition;
 
-    public float playerPositionOffset;
-    
-    private bool _isMouseDown;
-    private Vector3 _startPoint;
-    
-    
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private Vector3 CenterPosition => transform.position;
+
+    private void Awake()
     {
-        lineRenderers[0].positionCount = 2;
-        lineRenderers[1].positionCount = 2;
-        lineRenderers[0].SetPosition(0, stripPositions[0].position);
-        lineRenderers[1].SetPosition(0, stripPositions[1].position);
+        bandRenderer = GetComponent<LineRenderer>();
+        triggerCollider = GetComponent<Collider2D>();
         
-        CreatePlayer();
+        if (trajectoryLine == null)
+        {
+            trajectoryLine = GetComponentInChildren<TrajectoryLine>();
+        }
+
+        // Configure the band LineRenderer
+        if (bandRenderer != null)
+        {
+            bandRenderer.positionCount = 3;
+        }
+
+        // Ensure collider is marked as trigger
+        if (triggerCollider != null)
+        {
+            triggerCollider.isTrigger = true;
+        }
     }
 
-    // Update is called once per frame
+    void Start()
+    {
+        ResetStrips();
+    }
+
+    public void LoadPlayer(GameObject player)
+    {
+        playerRb = player.GetComponent<Rigidbody2D>();
+        playerCollider = player.GetComponent<Collider2D>();
+        if (playerCollider != null) playerCollider.enabled = false;
+        
+        playerRb.isKinematic = true;
+        playerRb.linearVelocity = Vector2.zero;
+        playerRb.angularVelocity = 0f;
+        
+        // Snap player to center position and reset rotation
+        playerRb.transform.position = CenterPosition;
+        playerRb.transform.rotation = Quaternion.identity;
+        
+        // Disable player controllers/inputs
+        PlayerController controller = player.GetComponent<PlayerController>();
+        if (controller != null) controller.enabled = false;
+        
+        PlayerInputHandler input = player.GetComponent<PlayerInputHandler>();
+        if (input != null) input.enabled = false;
+
+        SlingshotPlacer placer = player.GetComponent<SlingshotPlacer>();
+        if (placer != null) placer.enabled = false;
+
+        ResetStrips();
+    }
+
     void Update()
     {
-        if (_isMouseDown)
-        {
-            Vector3 mousePos = Input.mousePosition;
-            mousePos.z = 10;
-            
-            currentPosition = Camera.main.ScreenToWorldPoint(mousePos);
-            currentPosition = center.position + Vector3.ClampMagnitude(currentPosition - center.position, maxLength);
-            currentPosition = ClampBounds(currentPosition);
-            trajectoryLine.RenderLine(_startPoint, currentPosition);
-            
-            SetStrips(currentPosition);
+        if (playerRb == null) return;
 
-            
-            if (playerCollider)
+        bool mouseDown = GetMouseButton();
+        bool mouseDownThisFrame = GetMouseButtonDown();
+
+        if (mouseDownThisFrame)
+        {
+            Vector3 mouseWorldPos = GetMouseWorldPosition();
+            Collider2D hit = Physics2D.OverlapPoint(mouseWorldPos);
+            if (hit != null && (hit == triggerCollider || hit.transform.IsChildOf(transform)))
             {
-                playerCollider.enabled = true;
+                _isDragging = true;
             }
+        }
+
+        if (_isDragging)
+        {
+            if (mouseDown)
+            {
+                Vector3 mouseWorldPos = GetMouseWorldPosition();
+                currentPosition = CenterPosition + Vector3.ClampMagnitude(mouseWorldPos - CenterPosition, maxLength);
+                
+                Vector3 launchVelocity = (CenterPosition - currentPosition) * force;
+                float gravityScale = playerRb ? playerRb.gravityScale : 1f;
+                trajectoryLine.ShowTrajectory(playerRb ? playerRb.transform.position : currentPosition, launchVelocity, gravityScale);
+                
+                SetStrips(currentPosition);
+            }
+            else
+            {
+                _isDragging = false;
+                trajectoryLine.EndLine();
+                Shoot();
+            }
+        }
+    }
+
+    private bool _isDragging;
+
+    private bool GetMouseButton()
+    {
+        if (Mouse.current != null)
+        {
+            return Mouse.current.leftButton.isPressed;
+        }
+        return Input.GetMouseButton(0);
+    }
+
+    private bool GetMouseButtonDown()
+    {
+        if (Mouse.current != null)
+        {
+            return Mouse.current.leftButton.wasPressedThisFrame;
+        }
+        return Input.GetMouseButtonDown(0);
+    }
+
+    private Vector3 GetMouseWorldPosition()
+    {
+        Vector3 mousePos;
+        if (Mouse.current != null)
+        {
+            Vector2 screenPos = Mouse.current.position.ReadValue();
+            mousePos = new Vector3(screenPos.x, screenPos.y, 10f);
         }
         else
         {
-            ResetStrips();
+            mousePos = Input.mousePosition;
+            mousePos.z = 10f;
         }
-    }
-
-    void CreatePlayer()
-    {
-        playerRb = Instantiate(playerPrefab).GetComponent<Rigidbody2D>();
-        playerCollider = playerRb.GetComponent<Collider2D>();
-        playerCollider.enabled = false;
-    }
-    
-    void OnMouseDown()
-    {
-        Vector3 mousePos = Input.mousePosition;
-        mousePos.z = 10;
-        
-        _isMouseDown = true;
-        _startPoint = Camera.main.ScreenToWorldPoint(mousePos);
-    }
-    
-    void OnMouseUp()
-    {
-        _isMouseDown = false;
-        trajectoryLine.EndLine();
-        Shoot();
+        return Camera.main.ScreenToWorldPoint(mousePos);
     }
 
     void Shoot()
     {
-        playerRb.isKinematic = false;
-        Vector3 playerForce = (currentPosition - center.position) * force * -1;
-        playerRb.linearVelocity = playerForce;
+        if (playerRb == null) return;
+        
+        Vector3 pullVector = CenterPosition - currentPosition;
+        if (pullVector.magnitude > 0.2f)
+        {
+            playerRb.isKinematic = false;
+            Vector3 playerForce = pullVector * force;
+            playerRb.linearVelocity = playerForce;
 
-        playerRb = null;
-        playerCollider = null;
+            if (playerCollider != null) playerCollider.enabled = true;
+
+            // Re-enable player controllers/inputs
+            PlayerController controller = playerRb.GetComponent<PlayerController>();
+            if (controller != null) controller.enabled = true;
+            
+            PlayerInputHandler input = playerRb.GetComponent<PlayerInputHandler>();
+            if (input != null) input.enabled = true;
+
+            SlingshotPlacer placer = playerRb.GetComponent<SlingshotPlacer>();
+            if (placer != null) placer.enabled = true;
+
+            playerRb = null;
+            playerCollider = null;
+            ResetStrips();
+        }
+        else
+        {
+            ResetPlayerToIdle();
+        }
     }
 
-
+    void ResetPlayerToIdle()
+    {
+        if (playerRb)
+        {
+            playerRb.transform.position = CenterPosition;
+            playerRb.transform.rotation = Quaternion.identity;
+            playerRb.linearVelocity = Vector2.zero;
+            playerRb.angularVelocity = 0f;
+        }
+        ResetStrips();
+    }
 
     void ResetStrips()
     {
-        currentPosition = idlePosition.position;
+        currentPosition = CenterPosition;
         SetStrips(currentPosition);
     }
 
-    void SetStrips(Vector3 positions)
+    void SetStrips(Vector3 centerPullPosition)
     {
-        lineRenderers[0].SetPosition(1, positions);
-        lineRenderers[1].SetPosition(1, positions);
+        if (bandRenderer == null) return;
+
+        // Dynamic local positions for left/right anchors relative to slingshot rotation
+        Vector3 leftAnchor = CenterPosition + transform.right * -bandWidthOffset;
+        Vector3 rightAnchor = CenterPosition + transform.right * bandWidthOffset;
+
+        bandRenderer.SetPosition(0, leftAnchor);
+        bandRenderer.SetPosition(1, centerPullPosition);
+        bandRenderer.SetPosition(2, rightAnchor);
 
         if (playerRb)
         {
-            Vector3 direction = positions - center.position;
-            playerRb.transform.position = positions + direction.normalized * playerPositionOffset;
-            playerRb.transform.right = -direction.normalized;
+            Vector3 direction = centerPullPosition - CenterPosition;
+            if (direction.sqrMagnitude > 0.001f)
+            {
+                playerRb.transform.position = centerPullPosition + direction.normalized * playerPositionOffset;
+                playerRb.transform.right = -direction.normalized;
+            }
+            else
+            {
+                playerRb.transform.position = CenterPosition;
+                playerRb.transform.right = transform.right; // Facing forward default
+            }
         }
-    }
-    
-    Vector3 ClampBounds(Vector3 vector)
-    {
-        vector.y = Mathf.Clamp(vector.y, bottomBoundary, 1000);
-        return vector;
     }
 }

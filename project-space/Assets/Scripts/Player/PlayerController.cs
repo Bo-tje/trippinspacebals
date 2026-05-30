@@ -13,6 +13,8 @@ namespace Player
         private bool _jumpRequested;
 
         
+        private bool _isGrounded;
+        
         // Start is called once before the first execution of Update after the MonoBehaviour is created
         void Start()
         {
@@ -21,11 +23,19 @@ namespace Player
 
         private void FixedUpdate()
         {
-            _rigidbody.linearVelocity = new Vector2(_moveVector.x * movementSpeed, _rigidbody.linearVelocity.y);
+            if (_isGrounded)
+            {
+                _rigidbody.linearVelocity = new Vector2(_moveVector.x * movementSpeed, _rigidbody.linearVelocity.y);
+            }
             
-            if (_jumpRequested)
+            if (_jumpRequested && _isGrounded)
             {
                 _rigidbody.linearVelocity = new Vector2(_rigidbody.linearVelocity.x, jumpPower);
+                _jumpRequested = false;
+            }
+            else if (_jumpRequested)
+            {
+                // Clear jump request if we pressed jump but weren't grounded
                 _jumpRequested = false;
             }
         }
@@ -38,6 +48,16 @@ namespace Player
         public void Jump()
         {
             _jumpRequested = true;
+        }
+
+        private void OnCollisionStay2D(Collision2D collision)
+        {
+            _isGrounded = true;
+        }
+
+        private void OnCollisionExit2D(Collision2D collision)
+        {
+            _isGrounded = false;
         }
     }
 }
