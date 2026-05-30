@@ -60,8 +60,7 @@ Transform:
   m_LocalPosition: {x: -2.5, y: 0.038781166, z: 0.003176792}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 998031760316495811}
+  m_Children: []
   m_Father: {fileID: 4847890890027689524}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5941319996565864039
@@ -128,10 +127,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4847890890027689524}
-  - component: {fileID: 4803412726398839703}
   - component: {fileID: 2950532145231623222}
   - component: {fileID: 8500306529827791290}
   - component: {fileID: 2572363940235102299}
+  - component: {fileID: 9135083989309734810}
   m_Layer: 0
   m_Name: SlingShot
   m_TagString: Untagged
@@ -158,37 +157,10 @@ Transform:
   - {fileID: 8920501713518349438}
   - {fileID: 2008886536973866330}
   - {fileID: 3925458956506907919}
+  - {fileID: 998031760316495811}
+  - {fileID: 1734279717327038787}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4803412726398839703
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2058963610523423573}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8238613fce05d054da14c5cb0f969b6e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  trajectoryLine: {fileID: 8500306529827791290}
-  lineRenderers:
-  - {fileID: 7933708733786055720}
-  - {fileID: 9156524245847105751}
-  stripPositions:
-  - {fileID: 1734279717327038787}
-  - {fileID: 998031760316495811}
-  center: {fileID: 2008886536973866330}
-  idlePosition: {fileID: 3925458956506907919}
-  currentPosition: {x: 0, y: 0, z: 0}
-  maxLength: 10
-  bottomBoundary: -3.5
-  force: 10
-  playerPrefab: {fileID: 3892711947816186914, guid: 28f2a595266b91c4fb7ab63e1d06555d, type: 3}
-  playerRb: {fileID: 0}
-  playerCollider: {fileID: 0}
-  playerPositionOffset: 0
 --- !u!61 &2950532145231623222
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -373,6 +345,35 @@ LineRenderer:
   m_UseWorldSpace: 1
   m_Loop: 0
   m_ApplyActiveColorSpace: 1
+--- !u!114 &9135083989309734810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2058963610523423573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8238613fce05d054da14c5cb0f969b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trajectoryLine: {fileID: 8500306529827791290}
+  lineRenderers:
+  - {fileID: 7933708733786055720}
+  - {fileID: 9156524245847105751}
+  stripPositions:
+  - {fileID: 1734279717327038787}
+  - {fileID: 998031760316495811}
+  center: {fileID: 2008886536973866330}
+  idlePosition: {fileID: 3925458956506907919}
+  currentPosition: {x: 0, y: 0, z: 0}
+  maxLength: 5
+  bottomBoundary: -3
+  force: 5
+  playerPrefab: {fileID: 3892711947816186914, guid: 28f2a595266b91c4fb7ab63e1d06555d, type: 3}
+  playerRb: {fileID: 0}
+  playerCollider: {fileID: 0}
+  playerPositionOffset: 0
 --- !u!1 &2754298530627584743
 GameObject:
   m_ObjectHideFlags: 0
@@ -402,8 +403,7 @@ Transform:
   m_LocalPosition: {x: 2.5, y: 0.01878117, z: 0.003176792}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1734279717327038787}
+  m_Children: []
   m_Father: {fileID: 4847890890027689524}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7311050479107199199
@@ -486,11 +486,11 @@ Transform:
   m_GameObject: {fileID: 4259678578985133404}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5, y: -0.01878117, z: -0.003176792}
+  m_LocalPosition: {x: -2.5300002, y: 0.01878117, z: 10.003177}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 436141016274142587}
+  m_Father: {fileID: 4847890890027689524}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5035803644096554449
 GameObject:
@@ -795,11 +795,11 @@ Transform:
   m_GameObject: {fileID: 6828935735444116491}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5, y: -0.038781166, z: -0.003176792}
+  m_LocalPosition: {x: 2.5100002, y: 0.038781166, z: 10.003177}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 3274368212503669526}
+  m_Father: {fileID: 4847890890027689524}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7994029145951255355
 GameObject:
