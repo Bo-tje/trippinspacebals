@@ -37,7 +37,12 @@ namespace Player
     
         private void OnJumpPerformed(InputAction.CallbackContext context)
         {
-            if (_playerController != null)
+            SlingshotPlacer placer = GetComponent<SlingshotPlacer>();
+            if (placer != null && placer.enabled)
+            {
+                placer.Interact();
+            }
+            else if (_playerController != null)
             {
                 _playerController.Jump();
             }
