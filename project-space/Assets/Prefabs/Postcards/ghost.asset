@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Postcard
   id: Ghost
   title: 
-  image: {fileID: 8418184109364505648, guid: 613b6e10c44a29c41920a6b0ab7c5dd8, type: 3}
+  image: {fileID: -3356226355461403226, guid: e21db5590c6c1e649aaa97f27319f60e, type: 3}
   description: 
