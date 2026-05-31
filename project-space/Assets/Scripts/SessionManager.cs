@@ -99,11 +99,19 @@ public class SessionManager : MonoBehaviour
         }
         _sessionSlingshots.Clear();
 
-        // 3. Teleport player back home and refill slingshots
-        TeleportPlayerHome();
+        // 3. Show death screen instead of immediate teleport
+        GameUIController ui = FindFirstObjectByType<GameUIController>();
+        if (ui != null)
+        {
+            ui.ShowDeathScreen();
+        }
+        else
+        {
+            TeleportPlayerHome();
+        }
     }
 
-    private void TeleportPlayerHome()
+    public void TeleportPlayerHome()
     {
         Player.SlingshotPlacer placer = FindFirstObjectByType<Player.SlingshotPlacer>();
         HomePlanet home = FindFirstObjectByType<HomePlanet>();

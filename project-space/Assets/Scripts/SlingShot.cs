@@ -122,6 +122,19 @@ public class SlingShot : MonoBehaviour
     public Vector3 Center => CenterPosition;
     public Vector3 CurrentPullPosition => currentPosition;
 
+    /// <summary>
+    /// Returns a value between 0 (not stretched) and 1 (fully stretched to maxLength)
+    /// </summary>
+    public float StretchRatio
+    {
+        get
+        {
+            if (!_isDragging || maxLength <= 0f) return 0f;
+            float dist = Vector3.Distance(CenterPosition, currentPosition);
+            return Mathf.Clamp01(dist / maxLength);
+        }
+    }
+
     private bool GetMouseButton()
     {
         if (Mouse.current != null)
