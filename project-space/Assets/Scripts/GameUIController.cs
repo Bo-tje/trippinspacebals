@@ -31,6 +31,10 @@ public class GameUIController : MonoBehaviour
     [Tooltip("Delay in seconds before UI shows the restart/death prompt when airborne to prevent flicker on micro-hops.")]
     [SerializeField] private float ungroundedPromptDelay = 0.5f;
 
+    [Header("FMOD")]
+    FMOD.Studio.EventInstance shutterEvent;
+    FMOD.Studio.EventInstance paperEvent;
+
     private Player.PlayerController _player;
     private Player.SlingshotPlacer _placer;
     private bool _isAlbumOpen = false;
@@ -58,6 +62,10 @@ public class GameUIController : MonoBehaviour
 
         if (postcardPopupPanel != null)
             postcardPopupPanel.SetActive(false);
+
+        // Get FMOD Events
+        shutterEvent = FMODUnity.RuntimeManager.CreateInstance("event:/Camera Shutter");
+        paperEvent = FMODUnity.RuntimeManager.CreateInstance("event:/Paper");
     }
 
     private void Update()
@@ -82,6 +90,8 @@ public class GameUIController : MonoBehaviour
 
     public void ShowNewPostcardPopup(Postcard postcard)
     {
+        shutterEvent.start();
+
         if (postcard == null) return;
 
         Debug.Log($"[POSTCARD UI] Showing big popup showcase for '{postcard.title}'");
@@ -120,11 +130,13 @@ public class GameUIController : MonoBehaviour
         {
             postcardPopupPanel.SetActive(false);
 
+            paperEvent.start();
+
             // Re-enable player input if the album isn't also open
             //if (_player != null && !_isAlbumOpen)
             //{
             //    _player.enabled = true;
-           // }
+            // }
         }
     }
 

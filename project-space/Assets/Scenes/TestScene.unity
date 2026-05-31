@@ -119,6 +119,25 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &808648079 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6573558075818933757, guid: 5e18aff4ed7704e42a296e454f53f702, type: 3}
+  m_PrefabInstance: {fileID: 4192336018749987218}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &808648080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 808648079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioListener
+  nonRigidbodyVelocity: 0
+  attenuationObject: {fileID: 0}
 --- !u!1001 &967088413
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -436,10 +455,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Main Camera
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8360265400553452453, guid: 5e18aff4ed7704e42a296e454f53f702, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6573558075818933757, guid: 5e18aff4ed7704e42a296e454f53f702, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 808648080}
   m_SourcePrefab: {fileID: 100100000, guid: 5e18aff4ed7704e42a296e454f53f702, type: 3}
 --- !u!1001 &8523763264805865197
 PrefabInstance:
