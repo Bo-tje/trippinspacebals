@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{d98f55ec-3940-49c9-9085-d7a88b594df6}">
+		<property name="name">
+			<value>Stretch Intensity</value>
+		</property>
+		<relationship name="folder">
+			<destination>{ee33a190-1cc8-48d4-9db5-af9e31c60a70}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{bc2a3125-9033-49b8-8a8a-064e0a89c9db}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{bc2a3125-9033-49b8-8a8a-064e0a89c9db}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

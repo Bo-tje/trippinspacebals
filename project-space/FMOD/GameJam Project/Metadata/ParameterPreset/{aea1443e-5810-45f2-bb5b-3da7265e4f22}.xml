@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{aea1443e-5810-45f2-bb5b-3da7265e4f22}">
+		<property name="name">
+			<value>Nearby Planet</value>
+		</property>
+		<relationship name="folder">
+			<destination>{ee33a190-1cc8-48d4-9db5-af9e31c60a70}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{241e77c9-39ed-454f-bba3-fddd6c266af0}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{241e77c9-39ed-454f-bba3-fddd6c266af0}">
+		<property name="parameterType">
+			<value>2</value>
+		</property>
+		<property name="maximum">
+			<value>4</value>
+		</property>
+		<property name="enumerationLabels">
+			<value>None</value>
+			<value>Cat</value>
+			<value>Seal</value>
+			<value>Blood</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

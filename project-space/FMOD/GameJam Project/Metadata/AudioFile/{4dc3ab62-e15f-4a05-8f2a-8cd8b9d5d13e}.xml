@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{4dc3ab62-e15f-4a05-8f2a-8cd8b9d5d13e}">
+		<property name="assetPath">
+			<value>Blood_Planet_Layer.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>15.24</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{5e4d85e3-dc21-4df5-ae74-d681859fe2d4}</destination>
+		</relationship>
+	</object>
+</objects>
