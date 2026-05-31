@@ -6,9 +6,13 @@ using System.Collections.Generic;
 public class GameUIController : MonoBehaviour
 {
     [Header("HUD Elements")]
+    [SerializeField] private GameObject hudPanel;
     [SerializeField] private TextMeshProUGUI slingsText;
     [SerializeField] private TextMeshProUGUI promptText;
     [SerializeField] private Button openAlbumButton;
+    
+    [Header("Pause Menu")]
+    [SerializeField] private GameObject pauseMenu;
 
     [Header("Album UI Panel")]
     [SerializeField] private GameObject albumPanel;
@@ -119,6 +123,24 @@ public class GameUIController : MonoBehaviour
             //{
             //    _player.enabled = false;
            // }
+        }
+    }
+
+    public void OpenPauseMenu()
+    {
+        if (pauseMenu != null && !pauseMenu.activeSelf)
+        {
+            pauseMenu.SetActive(true);
+            hudPanel.SetActive(false);
+        }
+    }
+    
+    public void ClosePauseMenu()
+    {
+        if (pauseMenu != null && pauseMenu.activeSelf)
+        {
+            pauseMenu.SetActive(false);
+            hudPanel.SetActive(true);
         }
     }
 

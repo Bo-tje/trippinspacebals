@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{90f611fc-979d-4b48-ac91-7f5e3aea81f0}">
+		<property name="assetPath">
+			<value>slingshot_stretch_5.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.67875</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{5e4d85e3-dc21-4df5-ae74-d681859fe2d4}</destination>
+		</relationship>
+	</object>
+</objects>
