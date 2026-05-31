@@ -36,12 +36,8 @@ public Button Startbutton;
 
     public void closeLetter()
     {
-        SceneManager.LoadScene(scene + 1);
+        SceneManager.LoadScene(1);
     }
 
-    public void ChangeScene()
-    {
-        SceneManager.LoadScene(scene + 1);
-
-    }
+    
 }
