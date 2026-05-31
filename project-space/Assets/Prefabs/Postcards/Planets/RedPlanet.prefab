@@ -193,7 +193,7 @@ MonoBehaviour:
   - Name: Nearby Planet
     Value: 3
   OverrideAttenuation: 1
-  OverrideMinDistance: 9
+  OverrideMinDistance: 10
   OverrideMaxDistance: 20
 --- !u!1 &7352499868881571066
 GameObject:

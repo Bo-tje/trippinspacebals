@@ -284,5 +284,5 @@ MonoBehaviour:
   - Name: Nearby Planet
     Value: 1
   OverrideAttenuation: 1
-  OverrideMinDistance: 9
+  OverrideMinDistance: 10
   OverrideMaxDistance: 20

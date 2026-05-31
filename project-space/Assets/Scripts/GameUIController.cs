@@ -1,7 +1,10 @@
 using UnityEngine;
+using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
+
 
 public class GameUIController : MonoBehaviour
 {
@@ -152,6 +155,11 @@ public class GameUIController : MonoBehaviour
             pauseMenu.SetActive(true);
             hudPanel.SetActive(false);
         }
+    }
+
+    public void QuitGame()
+    {
+        SceneManager.LoadScene(0);
     }
     
     public void ClosePauseMenu()
