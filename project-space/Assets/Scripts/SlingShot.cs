@@ -116,7 +116,7 @@ public class SlingShot : MonoBehaviour
                 trajectoryLine.ShowTrajectory(playerRb ? playerRb.transform.position : currentPosition, launchVelocity, gravityScale);
 
                 // to do: Change Stretch Intensity, add value
-                slingshotEvent.EventInstance.setParameterByName("Stretch Intensity", 1);
+                slingshotEvent.EventInstance.setParameterByName("Stretch Intensity", StretchRatio);
 
                 SetStrips(currentPosition);
             }

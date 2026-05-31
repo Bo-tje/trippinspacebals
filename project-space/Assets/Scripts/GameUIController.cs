@@ -31,6 +31,10 @@ public class GameUIController : MonoBehaviour
     [SerializeField] private TextMeshProUGUI popupDescriptionText;
     [SerializeField] private Button closePopupButton;
 
+    [Header("Death Screen")]
+    [SerializeField] private GameObject deathScreenPanel;
+    [SerializeField] private Button respawnButton;
+
     [Header("UI Tweak Settings")]
     [Tooltip("Delay in seconds before UI shows the restart/death prompt when airborne to prevent flicker on micro-hops.")]
     [SerializeField] private float ungroundedPromptDelay = 0.5f;
@@ -60,12 +64,18 @@ public class GameUIController : MonoBehaviour
         if (closePopupButton != null)
             closePopupButton.onClick.AddListener(ClosePostcardPopup);
 
+        if (respawnButton != null)
+            respawnButton.onClick.AddListener(RespawnPlayer);
+
         // Ensure screens are closed at start
         if (albumPanel != null)
             albumPanel.SetActive(false);
 
         if (postcardPopupPanel != null)
             postcardPopupPanel.SetActive(false);
+
+        if (deathScreenPanel != null)
+            deathScreenPanel.SetActive(false);
 
         // Get FMOD Events
         shutterEvent = FMODUnity.RuntimeManager.CreateInstance("event:/Camera Shutter");
@@ -88,6 +98,15 @@ public class GameUIController : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Space))
             {
                 ClosePostcardPopup();
+            }
+        }
+
+        // Allow pressing Space, Enter, or R to respawn when the death screen is open
+        if (deathScreenPanel != null && deathScreenPanel.activeSelf)
+        {
+            if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.R))
+            {
+                RespawnPlayer();
             }
         }
     }
@@ -292,6 +311,46 @@ public class GameUIController : MonoBehaviour
                 postcardSlots[i].sprite = emptySlotSprite;
                 postcardSlots[i].color = new Color(1f, 1f, 1f, 0.2f);
             }
+        }
+    }
+
+    public void ShowDeathScreen()
+    {
+        Debug.Log("[DEATH UI] Displaying death screen. Pausing player.");
+        
+        if (deathScreenPanel != null)
+            deathScreenPanel.SetActive(true);
+
+        // Stop player physics and disable control
+        if (_player != null)
+        {
+            _player.enabled = false;
+            Rigidbody2D rb = _player.GetComponent<Rigidbody2D>();
+            if (rb != null)
+            {
+                rb.linearVelocity = Vector2.zero;
+                rb.angularVelocity = 0f;
+            }
+        }
+    }
+
+    public void RespawnPlayer()
+    {
+        Debug.Log("[DEATH UI] Respawning player home.");
+
+        if (deathScreenPanel != null)
+            deathScreenPanel.SetActive(false);
+
+        // Teleport player back home
+        if (SessionManager.Instance != null)
+        {
+            SessionManager.Instance.TeleportPlayerHome();
+        }
+
+        // Re-enable player control
+        if (_player != null)
+        {
+            _player.enabled = true;
         }
     }
 }
