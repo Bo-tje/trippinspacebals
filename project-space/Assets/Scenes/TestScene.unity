@@ -312,6 +312,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1044386571985467889, guid: 82d78ef3b5c7a5943ab4203b27ccf683, type: 3}
+      propertyPath: gravityRadius
+      value: 7.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1044386571985467889, guid: 82d78ef3b5c7a5943ab4203b27ccf683, type: 3}
+      propertyPath: gravityStrength
+      value: 10.18
+      objectReference: {fileID: 0}
     - target: {fileID: 4015314777487799085, guid: 82d78ef3b5c7a5943ab4203b27ccf683, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -358,7 +366,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 06b9605d066d5b44c95b6ffc1caa89d2, type: 2}
     - target: {fileID: 6302209523613631821, guid: 82d78ef3b5c7a5943ab4203b27ccf683, type: 3}
       propertyPath: isCustomPlanet
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7011950984188858687, guid: 82d78ef3b5c7a5943ab4203b27ccf683, type: 3}
       propertyPath: m_Name
@@ -498,6 +506,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1192448603681618350, guid: 9aa0f8bb238175640b7b6709a6efaf03, type: 3}
+      propertyPath: minimumSpacing
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1192448603681618350, guid: 9aa0f8bb238175640b7b6709a6efaf03, type: 3}
+      propertyPath: spawnAreaSize.x
+      value: 195.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1192448603681618350, guid: 9aa0f8bb238175640b7b6709a6efaf03, type: 3}
+      propertyPath: spawnAreaSize.y
+      value: 156.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1192448603681618350, guid: 9aa0f8bb238175640b7b6709a6efaf03, type: 3}
+      propertyPath: 'customPlanetPrefabs.Array.data[5]'
+      value: 
+      objectReference: {fileID: 7011950984188858687, guid: 3d0091ffea1ca3447b0a618188a5bb27, type: 3}
     - target: {fileID: 2098754466662867755, guid: 9aa0f8bb238175640b7b6709a6efaf03, type: 3}
       propertyPath: m_Name
       value: GalaxySpawner
