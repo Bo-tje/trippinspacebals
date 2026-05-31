@@ -16,13 +16,16 @@
 			<value>2</value>
 		</property>
 		<property name="maximum">
-			<value>4</value>
+			<value>7</value>
 		</property>
 		<property name="enumerationLabels">
 			<value>None</value>
 			<value>Cat</value>
 			<value>Seal</value>
 			<value>Blood</value>
+			<value>Lantern</value>
+			<value>Volcano</value>
+			<value>Ghost</value>
 		</property>
 		<property name="initialValue">
 			<value>0</value>
