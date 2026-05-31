@@ -20,6 +20,10 @@ public class SlingShot : MonoBehaviour
     public Collider2D playerCollider;
     public Vector3 currentPosition;
 
+    [Header("FMOD")]
+    FMODUnity.StudioEventEmitter slingshotEvent;
+    FMOD.Studio.EventInstance shootEvent;
+
     private Vector3 CenterPosition => transform.position;
 
     private void Awake()
@@ -43,6 +47,10 @@ public class SlingShot : MonoBehaviour
         {
             triggerCollider.isTrigger = true;
         }
+
+        // Retrieve event emitter
+        slingshotEvent = GetComponent<FMODUnity.StudioEventEmitter>();
+        shootEvent = FMODUnity.RuntimeManager.CreateInstance("event:/Slingshot Release");
     }
 
     void Start()
@@ -92,6 +100,8 @@ public class SlingShot : MonoBehaviour
             {
                 _isDragging = true;
             }
+
+            slingshotEvent.Play();
         }
 
         if (_isDragging)
@@ -104,11 +114,16 @@ public class SlingShot : MonoBehaviour
                 Vector3 launchVelocity = (CenterPosition - currentPosition) * force;
                 float gravityScale = playerRb ? playerRb.gravityScale : 1f;
                 trajectoryLine.ShowTrajectory(playerRb ? playerRb.transform.position : currentPosition, launchVelocity, gravityScale);
-                
+
+                // to do: Change Stretch Intensity, add value
+                slingshotEvent.EventInstance.setParameterByName("Stretch Intensity", 1);
+
                 SetStrips(currentPosition);
             }
             else
             {
+                slingshotEvent.Stop();
+                shootEvent.start();
                 _isDragging = false;
                 trajectoryLine.EndLine();
                 Shoot();
