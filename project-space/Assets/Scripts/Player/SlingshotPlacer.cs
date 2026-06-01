@@ -9,6 +9,7 @@ namespace Player
         [SerializeField] private float spawnVerticalOffset = 1.5f;
 
         public int SlingshotsRemaining => slingshotsRemaining;
+        public bool IsNearSlingshot => _nearbySlingshot != null;
 
         private SlingShot _nearbySlingshot;
         private PlayerController _playerController;

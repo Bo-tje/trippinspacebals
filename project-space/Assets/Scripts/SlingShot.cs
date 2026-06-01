@@ -20,6 +20,8 @@ public class SlingShot : MonoBehaviour
     public Collider2D playerCollider;
     public Vector3 currentPosition;
 
+    public static SlingShot ActiveLoadedSlingshot { get; private set; }
+
     [Header("FMOD")]
     FMODUnity.StudioEventEmitter slingshotEvent;
     FMOD.Studio.EventInstance shootEvent;
@@ -82,12 +84,20 @@ public class SlingShot : MonoBehaviour
         SlingshotPlacer placer = player.GetComponent<SlingshotPlacer>();
         if (placer != null) placer.enabled = false;
 
+        ActiveLoadedSlingshot = this;
         ResetStrips();
     }
 
     void Update()
     {
         if (playerRb == null) return;
+
+        // If they press Space, exit the slingshot without launching
+        if (GetExitKeyPressed() && !_isDragging)
+        {
+            CancelPullAndUnload();
+            return;
+        }
 
         bool mouseDown = GetMouseButton();
         bool mouseDownThisFrame = GetMouseButtonDown();
@@ -211,13 +221,18 @@ public class SlingShot : MonoBehaviour
             SlingshotPlacer placer = playerRb.GetComponent<SlingshotPlacer>();
             if (placer != null) placer.enabled = true;
 
+            if (ActiveLoadedSlingshot == this)
+            {
+                ActiveLoadedSlingshot = null;
+            }
+
             playerRb = null;
             playerCollider = null;
             ResetStrips();
         }
         else
         {
-            ResetPlayerToIdle();
+            CancelPullAndUnload();
         }
     }
 
@@ -230,16 +245,47 @@ public class SlingShot : MonoBehaviour
         }
     }
 
-    void ResetPlayerToIdle()
+    public void CancelPullAndUnload()
     {
-        if (playerRb)
+        if (playerRb == null) return;
+
+        playerRb.isKinematic = false;
+        playerRb.linearVelocity = Vector2.zero;
+        playerRb.angularVelocity = 0f;
+        playerRb.transform.position = CenterPosition;
+        playerRb.transform.rotation = Quaternion.identity;
+
+        if (playerCollider != null)
         {
-            playerRb.transform.position = CenterPosition;
-            playerRb.transform.rotation = Quaternion.identity;
-            playerRb.linearVelocity = Vector2.zero;
-            playerRb.angularVelocity = 0f;
+            playerCollider.enabled = true;
         }
+
+        PlayerController controller = playerRb.GetComponent<PlayerController>();
+        if (controller != null) controller.enabled = true;
+        
+        PlayerInputHandler input = playerRb.GetComponent<PlayerInputHandler>();
+        if (input != null) input.enabled = true;
+
+        SlingshotPlacer placer = playerRb.GetComponent<SlingshotPlacer>();
+        if (placer != null) placer.enabled = true;
+
+        if (ActiveLoadedSlingshot == this)
+        {
+            ActiveLoadedSlingshot = null;
+        }
+
+        playerRb = null;
+        playerCollider = null;
         ResetStrips();
+    }
+
+    private bool GetExitKeyPressed()
+    {
+        if (UnityEngine.InputSystem.Keyboard.current != null)
+        {
+            return UnityEngine.InputSystem.Keyboard.current.spaceKey.wasPressedThisFrame;
+        }
+        return Input.GetKeyDown(KeyCode.Space);
     }
 
     void ResetStrips()

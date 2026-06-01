@@ -200,13 +200,21 @@ public class GameUIController : MonoBehaviour
         // 2. Update contextual prompt text
         if (promptText != null)
         {
-            if (_player != null)
+            if (SlingShot.ActiveLoadedSlingshot != null)
+            {
+                promptText.text = "• Press [SPACE] to get out";
+            }
+            else if (_player != null)
             {
                 if (_player.IsGrounded)
                 {
                     _timeSinceUngrounded = 0f;
 
-                    if (_placer != null && _placer.SlingshotsRemaining > 0)
+                    if (_placer != null && _placer.IsNearSlingshot)
+                    {
+                        promptText.text = "• Press [SPACE] to get into slingshot";
+                    }
+                    else if (_placer != null && _placer.SlingshotsRemaining > 0)
                     {
                         promptText.text = "• Press [SPACE] to build a slingshot";
                     }
@@ -226,7 +234,11 @@ public class GameUIController : MonoBehaviour
                     else
                     {
                         // Show default grounded prompt during the brief transition period
-                        if (_placer != null && _placer.SlingshotsRemaining > 0)
+                        if (_placer != null && _placer.IsNearSlingshot)
+                        {
+                            promptText.text = "• Press [SPACE] to get into slingshot";
+                        }
+                        else if (_placer != null && _placer.SlingshotsRemaining > 0)
                         {
                             promptText.text = "• Press [SPACE] to build a slingshot";
                         }
