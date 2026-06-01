@@ -53,10 +53,10 @@ MonoBehaviour:
   - {fileID: 7011950984188858687, guid: a7100962c12be064bad0f2b9a55a245f, type: 3}
   fillerPlanetPrefabs:
   - {fileID: 7011950984188858687, guid: 0f08315ad8f5aea48b7c58fd6bb08de4, type: 3}
-  fillerPlanetCount: 10
-  minFillerScale: 5.4
-  maxFillerScale: 9.3
+  fillerPlanetCount: 20
+  minFillerScale: 6
+  maxFillerScale: 10
   randomizeFillerColor: 1
   spawnAreaSize: {x: 200, y: 200}
-  minimumSpacing: 15
+  minimumSpacing: 20
   spawnAreaCenter: {x: 0, y: 0, z: 0}

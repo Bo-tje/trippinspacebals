@@ -36,6 +36,10 @@ public Button Startbutton;
 
     public void closeLetter()
     {
+        if (SessionManager.Instance != null)
+        {
+            SessionManager.Instance.ResetSession();
+        }
         SceneManager.LoadScene(1);
     }
 

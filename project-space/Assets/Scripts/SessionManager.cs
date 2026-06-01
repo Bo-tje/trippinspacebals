@@ -82,6 +82,15 @@ public class SessionManager : MonoBehaviour
         Debug.Log("Session progress successfully committed to Album/Save State.");
     }
 
+    public void ResetSession()
+    {
+        backpackPostcards.Clear();
+        albumPostcards.Clear();
+        _sessionSlingshots.Clear();
+        _committedSlingshots.Clear();
+        Debug.Log("[SESSION] Session and Album fully reset for a fresh game start.");
+    }
+
     public void Die()
     {
         Debug.Log("Player Died! Resetting session progress...");

@@ -767,6 +767,10 @@ PrefabInstance:
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1192448603681618350, guid: 9aa0f8bb238175640b7b6709a6efaf03, type: 3}
+      propertyPath: minimumSpacing
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1192448603681618350, guid: 9aa0f8bb238175640b7b6709a6efaf03, type: 3}
       propertyPath: spawnAreaSize.x
       value: 426.9
       objectReference: {fileID: 0}
@@ -776,7 +780,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1192448603681618350, guid: 9aa0f8bb238175640b7b6709a6efaf03, type: 3}
       propertyPath: fillerPlanetCount
-      value: 25
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1192448603681618350, guid: 9aa0f8bb238175640b7b6709a6efaf03, type: 3}
       propertyPath: 'customPlanetPrefabs.Array.data[5]'
